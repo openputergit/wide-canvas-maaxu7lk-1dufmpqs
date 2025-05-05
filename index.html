@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zyrix - Enterprise Software Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --neon-blue: #00f3ff;
+            --cyber-purple: #ff00ff;
+        }
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #0a0a1f;
+            color: #ffffff;
+        }
+        .cyber-header {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .neon-border {
+            box-shadow: 0 0 10px var(--neon-blue), inset 0 0 10px var(--neon-blue);
+            animation: neonPulse 2s infinite;
+        }
+        @keyframes neonPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px var(--cyber-purple);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-cyan-500/30">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="cyber-header text-2xl text-cyan-400">ZYRIX</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#products" class="text-white hover:text-cyan-400 transition">Products</a>
+                    <a href="#services" class="text-white hover:text-cyan-400 transition">Services</a>
+                    <a href="#about" class="text-white hover:text-cyan-400 transition">About</a>
+                    <a href="#contact" class="text-white hover:text-cyan-400 transition">Contact</a>
+                </div>
+                <button class="md:hidden text-white" onclick="toggleMenu()">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h1 class="cyber-header text-4xl md:text-6xl mb-6 text-cyan-400">Next-Gen Software Solutions</h1>
+                <p class="text-xl mb-8">Empowering Your Digital Transformation</p>
+                <a href="#products" class="inline-block px-8 py-3 bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-300 neon-border rounded">
+                    Explore Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="cyber-header text-3xl md:text-4xl text-center mb-16 text-cyan-400">Our Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Kitap -->
+                <div class="product-card bg-black/50 p-6 rounded-lg border border-cyan-500/30 transition duration-300">
+                    <i class="bi bi-phone text-4xl text-cyan-400 mb-4"></i>
+                    <h3 class="cyber-header text-xl mb-4">Kitap</h3>
+                    <p class="mb-4">End-to-end web and mobile applications testing solution</p>
+                    <a href="#" class="text-cyan-400 hover:text-cyan-300">Learn More →</a>
+                </div>
+
+                <!-- DQG -->
+                <div class="product-card bg-black/50 p-6 rounded-lg border border-cyan-500/30 transition duration-300">
+                    <i class="bi bi-database text-4xl text-cyan-400 mb-4"></i>
+                    <h3 class="cyber-header text-xl mb-4">DQG</h3>
+                    <p class="mb-4">Data Quality Gateway for comprehensive data management</p>
+                    <a href="#" class="text-cyan-400 hover:text-cyan-300">Learn More →</a>
+                </div>
+
+                <!-- TDM -->
+                <div class="product-card bg-black/50 p-6 rounded-lg border border-cyan-500/30 transition duration-300">
+                    <i class="bi bi-gear text-4xl text-cyan-400 mb-4"></i>
+                    <h3 class="cyber-header text-xl mb-4">TDM</h3>
+                    <p class="mb-4">Test Data Management and Generation Tool</p>
+                    <a href="#" class="text-cyan-400 hover:text-cyan-300">Learn More →</a>
+                </div>
+
+                <!-- API Test Easy -->
+                <div class="product-card bg-black/50 p-6 rounded-lg border border-cyan-500/30 transition duration-300">
+                    <i class="bi bi-code-slash text-4xl text-cyan-400 mb-4"></i>
+                    <h3 class="cyber-header text-xl mb-4">API Test Easy</h3>
+                    <p class="mb-4">Comprehensive API Testing Tools</p>
+                    <a href="#" class="text-cyan-400 hover:text-cyan-300">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black/30">
+        <div class="container mx-auto px-4">
+            <h2 class="cyber-header text-3xl md:text-4xl text-center mb-16 text-cyan-400">Contact Us</h2>
+            <div class="max-w-lg mx-auto">
+                <form class="space-y-6">
+                    <div>
+                        <input type="text" placeholder="Name" class="w-full p-3 bg-black/50 border border-cyan-500/30 rounded text-white focus:border-cyan-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email" class="w-full p-3 bg-black/50 border border-cyan-500/30 rounded text-white focus:border-cyan-400 focus:outline-none">
+                    </div>
+                    <div>
+                        <textarea placeholder="Message" rows="4" class="w-full p-3 bg-black/50 border border-cyan-500/30 rounded text-white focus:border-cyan-400 focus:outline-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-cyan-400 text-black hover:bg-cyan-300 transition duration-300 rounded">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="text-cyan-400">© 2023 Zyrix. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.createElement('div');
+            menu.className = 'fixed inset-0 bg-black/95 z-50 flex items-center justify-center';
+            menu.innerHTML = `
+                <div class="text-center">
+                    <button onclick="this.parentElement.parentElement.remove()" class="absolute top-4 right-4 text-white">
+                        <i class="bi bi-x-lg text-2xl"></i>
+                    </button>
+                    <div class="space-y-8">
+                        <a href="#products" class="block text-white text-xl hover:text-cyan-400">Products</a>
+                        <a href="#services" class="block text-white text-xl hover:text-cyan-400">Services</a>
+                        <a href="#about" class="block text-white text-xl hover:text-cyan-400">About</a>
+                        <a href="#contact" class="block text-white text-xl hover:text-cyan-400">Contact</a>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(menu);
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
